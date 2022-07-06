@@ -31,7 +31,6 @@
     
     
     <title>Pacman</title> 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <div class="eyes">
       <div class="eye">
         <div class="ball"></div>
@@ -40,18 +39,19 @@
         <div class="ball"></div>
       </div>
     </div>
-  </body>
-  <script>
-    var balls = document.getElementsByClassName("ball");
-    document.onmousemove = () => {
-      var x = (event.clientX * 100) / window.innerWidth + "%";
-      var y = (event.clientY * 100) / window.innerHeight + "%";
-
-      for (let i = 0; i < 2; i++) {
-        balls[i].style.left = x;
-        balls[i].style.top = y;
-        balls[i].transfoorm = "translate(-" + x + ",-" + y + ")";
+    <script>
+      var balls = document.getElementsByClassName("ball");
+      document.onmousemove = () => {
+        var x = (event.clientX * 100) / window.innerWidth + "%";
+        var y = (event.clientY * 100) / window.innerHeight + "%";
+        
+        for (let i = 0; i < 2; i++) {
+          balls[i].style.left = x;
+          balls[i].style.top = y;
+          balls[i].transfoorm = "translate(-" + x + ",-" + y + ")";
       }
     };
-  </script>
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
 </html>
